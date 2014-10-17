@@ -53,7 +53,7 @@ class Date_Range_Filter {
 		?>
 		<div id="date-range-filter-interval" class="date-interval">
 
-			<select class="field-predefined hide-if-no-js" name="date_predefined" data-placeholder="<?php _e( 'All Time', 'date-range-filter' ); ?>">
+			<select class="field-predefined hide-if-no-js" name="date_predefined" data-placeholder="<?php _e( 'Show All Time', 'date-range-filter' ); ?>">
 				<option>All time</option>
 				<option value="custom" <?php selected( 'custom' === $date_predefined ); ?>><?php esc_attr_e( 'Custom Date Range', 'date-range-filter' ) ?></option>
 				<?php foreach ( $intervals as $key => $interval ) {
