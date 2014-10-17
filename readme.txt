@@ -19,10 +19,10 @@ This plugin was develop to supercharge the current date filter of WordPress admi
 
 By default the plugin only filters post creation date. If you would like to filter the post modified date, please use this filter:
 `
-	function my_date_range_filter_query_columns( $column ){
+	function my_date_range_filter_query_column( $column ){
 		return 'post_modified';
 	}
-	add_filter( 'date_range_filter_query_columns', 'my_date_range_filter_query_columns', 10, 1 );
+	add_filter( 'date_range_filter_query_column', 'my_date_range_filter_query_column', 10, 1 );
 `
 
 **Languages Supported:**

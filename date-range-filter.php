@@ -243,7 +243,7 @@ class Date_Range_Filter {
 						'day'   => $day_to,
 					),
 					'inclusive' => apply_filters( 'date_range_filter_query_is_inclusive', true ),
-					'column'    => apply_filters( 'date_range_filter_query_columns', 'post_date' ),
+					'column'    => apply_filters( 'date_range_filter_query_column', 'post_date' ),
 				)
 			);
 		}
