@@ -7,6 +7,7 @@
  * License: GPLv2+
  * Text Domain: date-range-filter
  * Domain Path: /languages
+ * Author URI: http://jonathanbardo.com
  */
 
 class Date_Range_Filter {
@@ -44,9 +45,9 @@ class Date_Range_Filter {
 		wp_enqueue_script( 'jquery-ui-datepicker' );
 		wp_enqueue_script( 'date-range-filter-admin' );
 
-		$date_predefined = wp_stream_filter_input( INPUT_GET, 'date_predefined' );
-		$date_from       = wp_stream_filter_input( INPUT_GET, 'date_from' );
-		$date_to         = wp_stream_filter_input( INPUT_GET, 'date_to' );
+		$date_predefined = isset( $_GET['date_predefined'] ) ? sanitize_text_field( $_GET['date_predefined'] ) : '';
+		$date_from       = isset( $_GET['date_from'] ) ? sanitize_text_field( $_GET['date_from'] ) : '';
+		$date_to         = isset( $_GET['date_to'] ) ? sanitize_text_field( $_GET['date_to'] ) : '';
 
 		$intervals = self::get_predefined_intervals();
 		?>
