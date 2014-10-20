@@ -1,5 +1,6 @@
 #date-range-filter-interval {
-	display: none;
+	display: inline;
+	float: left;
 }
 
 #date-range-filter-interval .date-inputs {
@@ -10,7 +11,6 @@
 	width: 165px;
 	float: left;
 	margin-right: 6px;
-	margin-bottom: 6px;
 }
 
 #date-range-filter-interval .date-inputs {
