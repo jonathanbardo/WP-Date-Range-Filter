@@ -183,9 +183,15 @@ class Date_Range_Filter {
 	 * Register all needed assets
 	 */
 	public static function admin_menu_scripts() {
+		global $pagenow;
+
+		if ( 'edit.php' !== $pagenow ) {
+			return false;
+		}
+
+		wp_enqueue_style( 'date-range-filter-datepicker', DATE_RANGE_FILTER_URL . 'css/datepicker.css', array( 'jquery-ui' ), self::VERSION );
+		wp_enqueue_style( 'date-range-filter-admin', DATE_RANGE_FILTER_URL . 'css/admin.css', array(), self::VERSION );
 		wp_register_style( 'jquery-ui', '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/jquery-ui.css', array(), '1.10.1' );
-		wp_register_style( 'date-range-filter-datepicker', DATE_RANGE_FILTER_URL . 'css/datepicker.css', array( 'jquery-ui' ), self::VERSION );
-		wp_register_style( 'date-range-filter-admin', DATE_RANGE_FILTER_URL . 'css/admin.css', array(), self::VERSION );
 		wp_register_script( 'date-range-filter-admin', DATE_RANGE_FILTER_URL . 'js/admin.js', array( 'jquery', ), self::VERSION );
 		wp_localize_script(
 			'date-range-filter-admin',
