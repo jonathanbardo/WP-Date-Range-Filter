@@ -4,6 +4,8 @@ jQuery(function($) {
 	var intervals = {
 		init: function( $wrapper ) {
 			this.wrapper = $wrapper;
+			// Show the wrapper
+			$wrapper.css('display', 'inline-block');
 			this.save_interval( this.wrapper.find( '.button-primary' ), this.wrapper );
 
 			this.$ = this.wrapper.each( function( i, val ) {
