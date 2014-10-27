@@ -27,7 +27,8 @@ function my_date_range_filter_query_column( $column ){
 add_filter( 'date_range_filter_query_column', 'my_date_range_filter_query_column', 10, 1 );
 ```
 
-**Note for developers**
+**Note for developers:**
+
 Is my plugin not giving you enough filters/hooks to play with? Well you are in luck! You can use php class extension to override a part of this plugin. Just create another plugin that extends this one and remove the plugins_loaded action from this plugin and you will be free to do whatever you like! Example [here](https://gist.github.com/jonathanbardo/b837ef296d9883eff2d8).
 
 **Languages Supported:**
