@@ -20,13 +20,16 @@ class Date_Range_Filter {
 	 * Object constructor
 	 */
 	public static function setup() {
+		// I heard you like to extend plugins?
+		static::$class = get_called_class();
+
 		define( 'DATE_RANGE_FILTER_DIR',     plugin_dir_path( __FILE__ ) );
 		define( 'DATE_RANGE_FILTER_URL',     plugin_dir_url( __FILE__ ) );
 		define( 'DATE_RANGE_FILTER_INC_DIR', DATE_RANGE_FILTER_DIR . 'includes/' );
 
-		add_action( 'restrict_manage_posts', array( __CLASS__, 'add_daterange_select' ) );
-		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'admin_menu_scripts' ) );
-		add_filter( 'pre_get_posts',         array( __CLASS__, 'filter_main_query' ), 10, 1 );
+		add_action( 'restrict_manage_posts', array( static::$class, 'add_daterange_select' ) );
+		add_action( 'admin_enqueue_scripts', array( static::$class, 'admin_menu_scripts' ) );
+		add_filter( 'pre_get_posts',         array( static::$class, 'filter_main_query' ), 10, 1 );
 	}
 
 	/**
