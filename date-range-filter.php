@@ -17,6 +17,13 @@ class Date_Range_Filter {
 	const VERSION = '0.0.2';
 
 	/**
+	 * Contain the called class name
+	 *
+	 * @var string
+	 */
+	protected static $class;
+	
+	/**
 	 * Object constructor
 	 */
 	public static function setup() {
