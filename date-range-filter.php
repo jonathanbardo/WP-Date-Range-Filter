@@ -216,18 +216,18 @@ class Date_Range_Filter {
 			is_admin()
 			&& $wp_query->is_main_query()
 			&& 'edit.php' === $pagenow
-			&& isset( $_GET[ 'date_from' ] ) && ! empty( $_GET[ 'date_from' ] )
-		    && isset( $_GET[ 'date_to' ] ) && ! empty( $_GET[ 'date_to' ] )
+			&& isset( $_GET['date_from'] ) && ! empty( $_GET['date_from'] )
+			&& isset( $_GET['date_to'] ) && ! empty( $_GET['date_to'] )
 		) {
-			$from = explode( '/', $_GET[ 'date_from' ] );
-			$to   = explode( '/', $_GET[ 'date_to' ] );
+			$from = explode( '/', sanitize_text_field( $_GET['date_from'] ) );//input var okay
+			$to   = explode( '/', sanitize_text_field( $_GET['date_to'] ) );//input var ok
 
 			$from = array_map( 'intval', $from );
 			$to   = array_map( 'intval', $to );
 
 			if (
-				count( $to ) === 3
-				&& count( $from ) === 3
+				3 === count( $to )
+				&& 3 === count( $from )
 			) {
 				list( $year_from, $month_from, $day_from ) = $from;
 				list( $year_to, $month_to, $day_to )       = $to;
