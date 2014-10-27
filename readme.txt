@@ -35,5 +35,8 @@ Please fill out an issue [here](https://github.com/jonathanbardo/WP-Date-Range-F
 
 == Changelog ==
 
+= 0.0.2 =
+Add sanitization and plugin hooks
+
 = 0.0.1 =
 Initial release. Props [Stream](https://profiles.wordpress.org/stream/)
