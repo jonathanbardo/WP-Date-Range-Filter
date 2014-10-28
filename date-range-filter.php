@@ -192,10 +192,10 @@ class Date_Range_Filter {
 	/**
 	 * Register all needed assets
 	 */
-	public static function admin_menu_scripts() {
+	public static function admin_menu_scripts( $page = 'edit.php' ) {
 		global $pagenow;
 
-		if ( 'edit.php' !== $pagenow ) {
+		if ( $page !== $pagenow ) {
 			return false;
 		}
 
