@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Date range filter
  * Description: Easily filter the admin list of post and custom post type with a date range
- * Version: 0.0.2
+ * Version: 0.0.3
  * Author: Jonathan Bardo
  * License: GPLv2+
  * Text Domain: date-range-filter
@@ -14,7 +14,7 @@ class Date_Range_Filter {
 	/**
 	 * Holds the plugin version number
 	 */
-	const VERSION = '0.0.2';
+	const VERSION = '0.0.3';
 
 	/**
 	 * Contain the called class name
@@ -22,7 +22,7 @@ class Date_Range_Filter {
 	 * @var string
 	 */
 	protected static $class;
-	
+
 	/**
 	 * Object constructor
 	 */
@@ -192,10 +192,10 @@ class Date_Range_Filter {
 	/**
 	 * Register all needed assets
 	 */
-	public static function admin_menu_scripts( $page = 'edit.php' ) {
+	public static function admin_menu_scripts() {
 		global $pagenow;
 
-		if ( $page !== $pagenow ) {
+		if ( ! in_array( $pagenow, array( 'edit.php', 'upload.php' ) ) ) {
 			return false;
 		}
 
@@ -225,12 +225,12 @@ class Date_Range_Filter {
 		if (
 			is_admin()
 			&& $wp_query->is_main_query()
-			&& 'edit.php' === $pagenow
+			&& in_array( $pagenow, array( 'edit.php', 'upload.php' ) )
 			&& isset( $_GET['date_from'] ) && ! empty( $_GET['date_from'] )
 			&& isset( $_GET['date_to'] ) && ! empty( $_GET['date_to'] )
 		) {
-			$from = explode( '/', sanitize_text_field( $_GET['date_from'] ) );//input var okay
-			$to   = explode( '/', sanitize_text_field( $_GET['date_to'] ) );//input var ok
+			$from = explode( '/', sanitize_text_field( $_GET['date_from'] ) );
+			$to   = explode( '/', sanitize_text_field( $_GET['date_to'] ) );
 
 			$from = array_map( 'intval', $from );
 			$to   = array_map( 'intval', $to );

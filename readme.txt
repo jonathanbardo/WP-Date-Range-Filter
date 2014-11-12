@@ -35,6 +35,9 @@ Please fill out an issue [here](https://github.com/jonathanbardo/WP-Date-Range-F
 
 == Changelog ==
 
+= 0.0.3 =
+Add date range filter on media
+
 = 0.0.2 =
 Add sanitization and plugin hooks
 
