@@ -7,7 +7,7 @@ Easily filter the admin list of post and custom post type with a date range.
 **Contributors:** [jonathanbardo](http://profiles.wordpress.org/jonathanbardo), [stream](http://profiles.wordpress.org/stream)  
 **Tags:** [date](http://wordpress.org/plugins/tags/date), [filter](http://wordpress.org/plugins/tags/filter), [admin](http://wordpress.org/plugins/tags/admin), [dashboard](http://wordpress.org/plugins/tags/dashboard)  
 **Requires at least:** 3.7  
-**Tested up to:** 4.0  
+**Tested up to:** 4.1
 **Stable tag:** trunk (master)  
 **License:** [GPLv2 or later](http://www.gnu.org/licenses/gpl-2.0.html)  
 
