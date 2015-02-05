@@ -35,6 +35,10 @@ jQuery(function($) {
 						}
 					}
 
+					if ( undefined !== jQuery.fn.select2 ) {
+						predefined.select2();
+					}
+
 					datepickers.datepicker({
 						dateFormat: 'yy/mm/dd',
 						maxDate: dayOffset,
