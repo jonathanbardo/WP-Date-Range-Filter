@@ -225,8 +225,8 @@ class Date_Range_Filter {
 			is_admin()
 			&& $wp_query->is_main_query()
 			&& in_array( $pagenow, array( 'edit.php', 'upload.php' ) )
-			&& isset( $_GET['date_from'] ) && ! empty( $_GET['date_from'] )
-			&& isset( $_GET['date_to'] ) && ! empty( $_GET['date_to'] )
+			&& ! empty( $_GET['date_from'] )
+			&& ! empty( $_GET['date_to'] )
 		) {
 			$from = explode( '/', sanitize_text_field( $_GET['date_from'] ) );
 			$to   = explode( '/', sanitize_text_field( $_GET['date_to'] ) );
