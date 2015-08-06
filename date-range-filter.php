@@ -46,17 +46,17 @@ class Date_Range_Filter {
 		if ( current_user_can( apply_filters( 'date_range_filter_dashboard_cap', 'edit_dashboard' ) ) ) {
 			add_action( 'wp_dashboard_setup', array( static::$class, 'add_dashboard_widget' ) );
 		}
+
+		// Carbon is great to handle dates
+		if ( ! class_exists( 'Carbon\Carbon' ) ) {
+			require_once DATE_RANGE_FILTER_INC_DIR . 'vendor/Carbon.php';
+		}
 	}
 
 	/**
 	 * Add daterange select
 	 */
 	public static function add_daterange_select() {
-		// Carbon is great to handle dates
-		if ( ! class_exists( 'Carbon\Carbon' ) ) {
-			require_once DATE_RANGE_FILTER_INC_DIR . 'vendor/Carbon.php';
-		}
-
 		wp_enqueue_style( 'jquery-ui' );
 		wp_enqueue_style( 'date-range-filter-admin' );
 		wp_enqueue_style( 'date-range-filter-datepicker' );
