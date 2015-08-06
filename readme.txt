@@ -1,8 +1,8 @@
 === Date Range Filter ===
-Contributors:      jonathanbardo, stream
-Tags:              date, filter, admin, dashboard
+Contributors:      jonathanbardo, lossonet, stream
+Tags:              date, filter, admin, dashboard, widget, stats
 Requires at least: 3.7
-Tested up to:      4.1
+Tested up to:      4.2
 Stable tag:        trunk
 License:           GPLv2 or later
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
@@ -34,6 +34,9 @@ add_filter( 'date_range_filter_query_column', 'my_date_range_filter_query_column
 Please fill out an issue [here](https://github.com/jonathanbardo/WP-Date-Range-Filter/issues).
 
 == Changelog ==
+
+= 0.0.5 =
+Add new dashboard widgets
 
 = 0.0.4 =
 Allow select2 if present

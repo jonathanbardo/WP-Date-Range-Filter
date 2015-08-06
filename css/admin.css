@@ -68,3 +68,60 @@
 #date-range-filter-interval .date-inputs .connector:before {
 	content: '\f345';
 }
+
+/*** Dashboard Widget ***/
+
+#date_range_dashboard_widget div.inside {
+	padding: 0;
+	margin: 0;
+}
+
+#date_range_dashboard_widget div.inside .drf-dashboard-table {
+	border: none;
+}
+
+#date_range_dashboard_widget div.inside .drf-dashboard-table ul li:before {
+	content: "-";
+	position: relative;
+	left: -5px;
+}
+
+#date_range_dashboard_widget div.inside .drf-dashboard-table .total-count {
+	text-align: right;
+}
+
+#date_range_dashboard_widget div.inside .drf-dashboard-table .total-row {
+	border-top: 1px solid #ccc;
+	font-weight: bold;
+}
+
+#date_range_dashboard_widget div.inside .drf-dashboard-table td.manage-column > ul {
+	margin-left: 20px;
+	display: none;
+}
+
+#date_range_dashboard_widget div.inside .drf-dashboard-table td.manage-column:first-child {
+	cursor: pointer;
+}
+
+#date_range_dashboard_widget .dashboard-widget-control-form .date-range-filter-config-label p {
+	margin: 20px;
+	font-weight: bold;
+}
+
+#date_range_dashboard_widget .dashboard-widget-control-form .date-range-filter-config-table {
+	margin: 0px 20px 15px;
+}
+
+#date_range_dashboard_widget .dashboard-widget-control-form .date-range-filter-config-select {
+	margin: 0px 0px 15px;
+}
+
+#date_range_dashboard_widget .dashboard-widget-control-form .date-range-filter-config-select {
+	margin-left: 20px;
+}
+
+#date_range_dashboard_widget div.inside p.submit {
+	clear: both;
+	padding: 20px;
+}

@@ -154,10 +154,20 @@ jQuery(function($) {
 				// Add params to URL
 				$( this ).attr( 'href', $( this ).attr( 'href' ) + '&' + $.param( data ) );
 			});
+		},
+
+		init_dashboard: function( $obj ) {
+			// Addind listeners
+			$obj.on('click', function() {
+				var $this = $(this);
+				$this.children('span').toggleClass('dashicons-arrow-right dashicons-arrow-down');
+				$this.children('ul').toggle();
+			});
 		}
 	};
 
 	$( document ).ready( function() {
 		intervals.init( $( '#date-range-filter-interval' ) );
+		intervals.init_dashboard( $('#date_range_dashboard_widget div.inside .drf-dashboard-table td.manage-column:first-child') );
 	});
 });
