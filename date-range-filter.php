@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Date range filter
  * Description: Easily filter the admin list of post and custom post type with a date range
- * Version: 0.0.5
+ * Version: 0.0.6
  * Author: Jonathan Bardo, Ricardo Losso
  * License: GPLv2+
  * Text Domain: date-range-filter
@@ -46,17 +46,17 @@ class Date_Range_Filter {
 		if ( current_user_can( apply_filters( 'date_range_filter_dashboard_cap', 'edit_dashboard' ) ) ) {
 			add_action( 'wp_dashboard_setup', array( static::$class, 'add_dashboard_widget' ) );
 		}
-
-		// Carbon is great to handle dates
-		if ( ! class_exists( 'Carbon\Carbon' ) ) {
-			require_once DATE_RANGE_FILTER_INC_DIR . 'vendor/Carbon.php';
-		}
 	}
 
 	/**
 	 * Add daterange select
 	 */
 	public static function add_daterange_select() {
+		// Carbon is great to handle dates
+		if ( ! class_exists( 'Carbon\Carbon' ) ) {
+			require_once DATE_RANGE_FILTER_INC_DIR . 'vendor/Carbon.php';
+		}
+
 		wp_enqueue_style( 'jquery-ui' );
 		wp_enqueue_style( 'date-range-filter-admin' );
 		wp_enqueue_style( 'date-range-filter-datepicker' );
@@ -447,14 +447,23 @@ class Date_Range_Filter {
 				$row->status_name = array_key_exists( $row->post_status, $wp_post_statuses ) ? $wp_post_statuses[ $row->post_status ]->label : $row->post_status;
 			}
 
-			list( $date_from ) = explode( ' ', $start_date );
-			list( $date_to ) = explode( ' ', $end_date );
+			list( $date_from ) = explode( ' ', str_replace( '-', '/', $start_date ) );
+			list( $date_to )   = explode( ' ', str_replace( '-', '/', $end_date ) );
 
 			$post['post_type']  = $post_type;
 			$post['type_label'] = $wp_post_types[ $post_type ]->labels->name;
 			$post['count']      = $total_count;
 			$post['status']     = $results;
-			$post['url']        = get_admin_url( get_current_blog_id(), "edit.php?post_type={$post_type}&date_predefined={$date_predefined}&date_from={$date_from}&date_to={$date_to}" );
+			$post['url']        = get_admin_url(
+				get_current_blog_id(),
+				sprintf(
+					"edit.php?post_type=%s&date_predefined=%s&date_from=%s&date_to=%s",
+					$post_type,
+					$date_predefined,
+					urlencode( $date_from ),
+					urlencode( $date_to )
+				)
+			);
 
 			$posts[] = $post;
 
