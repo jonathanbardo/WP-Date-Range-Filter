@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Date range filter
  * Description: Easily filter the admin list of post and custom post type with a date range
- * Version: 0.0.6
+ * Version: 0.0.7
  * Author: Jonathan Bardo, Ricardo Losso
  * License: GPLv2+
  * Text Domain: date-range-filter
@@ -14,7 +14,7 @@ class Date_Range_Filter {
 	/**
 	 * Holds the plugin version number
 	 */
-	const VERSION = '0.0.5';
+	const VERSION = '0.0.8';
 
 	/**
 	 * Contain the called class name
@@ -52,11 +52,6 @@ class Date_Range_Filter {
 	 * Add daterange select
 	 */
 	public static function add_daterange_select() {
-		// Carbon is great to handle dates
-		if ( ! class_exists( 'Carbon\Carbon' ) ) {
-			require_once DATE_RANGE_FILTER_INC_DIR . 'vendor/Carbon.php';
-		}
-
 		wp_enqueue_style( 'jquery-ui' );
 		wp_enqueue_style( 'date-range-filter-admin' );
 		wp_enqueue_style( 'date-range-filter-datepicker' );
@@ -116,6 +111,11 @@ class Date_Range_Filter {
 	 * Get predefined intervals values
 	 */
 	protected static function get_predefined_intervals() {
+		// Carbon is great to handle dates
+		if ( ! class_exists( 'Carbon\Carbon' ) ) {
+			require_once DATE_RANGE_FILTER_INC_DIR . 'vendor/Carbon.php';
+		}
+
 		$timezone = get_option( 'timezone_string' );
 
 		if ( empty( $timezone ) ) {

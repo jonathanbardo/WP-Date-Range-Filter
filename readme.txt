@@ -35,6 +35,9 @@ Please fill out an issue [here](https://github.com/jonathanbardo/WP-Date-Range-F
 
 == Changelog ==
 
+= 0.0.7 =
+Fix a bug where calling public function would throw a fatal error 
+
 = 0.0.6 =
 Fix bug in dashboard widgets
 
