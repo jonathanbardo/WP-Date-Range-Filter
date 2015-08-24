@@ -1,0 +1,97 @@
+# Copyright (C) 2015 Date range filter
+# This file is distributed under the same license as the Date range filter package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Date range filter 0.0.7\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/date-range-"
+"filter\n"
+"POT-Creation-Date: 2015-08-24 13:51:20+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: date-range-filter.php:70 date-range-filter.php:71 date-range-filter.php:317
+msgid "Show All Time"
+msgstr ""
+
+#: date-range-filter.php:72
+msgid "Custom Date Range"
+msgstr ""
+
+#: date-range-filter.php:91
+msgid "Start Date"
+msgstr ""
+
+#: date-range-filter.php:101
+msgid "End Date"
+msgstr ""
+
+#: date-range-filter.php:136
+msgid "Today"
+msgstr ""
+
+#: date-range-filter.php:141
+msgid "Yesterday"
+msgstr ""
+
+#: date-range-filter.php:146 date-range-filter.php:151
+#: date-range-filter.php:156
+msgid "Last %d Days"
+msgstr ""
+
+#: date-range-filter.php:161
+msgid "This Month"
+msgstr ""
+
+#: date-range-filter.php:166
+msgid "Last Month"
+msgstr ""
+
+#: date-range-filter.php:171 date-range-filter.php:176
+#: date-range-filter.php:181
+msgid "Last %d Months"
+msgstr ""
+
+#: date-range-filter.php:186
+msgid "This Year"
+msgstr ""
+
+#: date-range-filter.php:191
+msgid "Last Year"
+msgstr ""
+
+#: date-range-filter.php:324
+msgid "%s - %s"
+msgstr ""
+
+#: date-range-filter.php:328
+msgid "Posts per Date (%s)"
+msgstr ""
+
+#: includes/dashboard/config.php:17
+msgid "Choose Post Types:"
+msgstr ""
+
+#: includes/dashboard/config.php:33
+msgid "Choose Date Range:"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Date range filter"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Easily filter the admin list of post and custom post type with a date range"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Jonathan Bardo, Ricardo Losso"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://jonathanbardo.com, http://ricardolosso.com"
+msgstr ""
