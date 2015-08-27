@@ -13,7 +13,7 @@ Easily filter the admin list of post and custom post type with a date range.
 
 ## Description ##
 
-**Note: This plugin requires PHP 5.3 or higher to be activated.**
+**Note: This plugin requires PHP 5.3 or higher to be activated. 5.4 strongly recommended**
 
 A big shout-out to the [Stream](https://profiles.wordpress.org/stream/) team for developing much of the functionnality of this plugin and letting me reuse it for another purposes. You guys rock!
 
@@ -37,7 +37,10 @@ Please fill out an issue [here](https://github.com/jonathanbardo/WP-Date-Range-F
 
 ## Changelog ##
 
-### 0.0.7 ###
+### 0.0.9 ###
+Fix some php 5.3 incompatibilities
+
+### 0.0.8 ###
 Add localization
 
 ### 0.0.7 ###

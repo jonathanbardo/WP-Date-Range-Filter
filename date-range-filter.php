@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Date range filter
  * Description: Easily filter the admin list of post and custom post type with a date range
- * Version: 0.0.8
+ * Version: 0.0.9
  * Author: Jonathan Bardo, Ricardo Losso
  * License: GPLv2+
  * Text Domain: date-range-filter
@@ -332,8 +332,8 @@ class Date_Range_Filter {
 		wp_add_dashboard_widget(
 			self::dashboard_widget_id,
 			$widget_title,
-			[ __CLASS__, 'dashboard_widget' ],
-			[ __CLASS__, 'dashboard_config' ]
+			array( __CLASS__, 'dashboard_widget' ),
+			array( __CLASS__, 'dashboard_config' )
 		);
 	}
 
