@@ -37,6 +37,9 @@ Please fill out an issue [here](https://github.com/jonathanbardo/WP-Date-Range-F
 
 ## Changelog ##
 
+### 0.0.10 ###
+Fix compatibility with WooCommerce
+
 ### 0.0.9 ###
 Fix some php 5.3 incompatibilities
 

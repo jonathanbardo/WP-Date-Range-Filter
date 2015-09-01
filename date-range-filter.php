@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Date range filter
  * Description: Easily filter the admin list of post and custom post type with a date range
- * Version: 0.0.9
+ * Version: 0.0.10
  * Author: Jonathan Bardo, Ricardo Losso
  * License: GPLv2+
  * Text Domain: date-range-filter
@@ -14,7 +14,7 @@ class Date_Range_Filter {
 	/**
 	 * Holds the plugin version number
 	 */
-	const VERSION = '0.0.8';
+	const VERSION = '0.0.10';
 
 	/**
 	 * Contain the called class name
@@ -89,7 +89,7 @@ class Date_Range_Filter {
 					<i class="date-remove dashicons"></i>
 					<input type="text"
 						   name="date_from"
-						   class="date-picker field-from"
+						   class="field-from"
 						   placeholder="<?php esc_attr_e( 'Start Date', 'default' ) ?>"
 						   value="<?php echo esc_attr( $date_from ) ?>">
 				</div>
@@ -99,7 +99,7 @@ class Date_Range_Filter {
 					<i class="date-remove dashicons"></i>
 					<input type="text"
 						   name="date_to"
-						   class="date-picker field-to"
+						   class="field-to"
 						   placeholder="<?php esc_attr_e( 'End Date', 'default' ) ?>"
 						   value="<?php echo esc_attr( $date_to ) ?>">
 				</div>
