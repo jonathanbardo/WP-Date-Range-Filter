@@ -7,25 +7,25 @@ Easily filter the admin list of post and custom post type with a date range.
 **Contributors:** [jonathanbardo](http://profiles.wordpress.org/jonathanbardo), [lossonet](http://profiles.wordpress.org/lossonet), [stream](http://profiles.wordpress.org/stream)  
 **Tags:** [date](http://wordpress.org/plugins/tags/date), [filter](http://wordpress.org/plugins/tags/filter), [admin](http://wordpress.org/plugins/tags/admin), [dashboard](http://wordpress.org/plugins/tags/dashboard), [widget](http://wordpress.org/plugins/tags/widget), [stats](http://wordpress.org/plugins/tags/stats)  
 **Requires at least:** 3.7  
-**Tested up to:** 4.3  
+**Tested up to:** 4.4  
 **Stable tag:** trunk (master)  
 **License:** [GPLv2 or later](http://www.gnu.org/licenses/gpl-2.0.html)  
 
 ## Description ##
 
-**Note: This plugin requires PHP 5.3 or higher to be activated. 5.4 strongly recommended**
+**Note: This plugin requires PHP 5.3 or higher to be activated. 5.4 Strongly recommended.**
 
 A big shout-out to the [Stream](https://profiles.wordpress.org/stream/) team for developing much of the functionnality of this plugin and letting me reuse it for another purposes. You guys rock!
 
 This plugin was develop to supercharge the current date filter of WordPress admin. It will let you filter posts by a custom date range or by an already defined range.
 
 By default the plugin only filters post creation date. If you would like to filter the post modified date, please use this filter:
-```
+`
 function my_date_range_filter_query_column( $column ){
 	return 'post_modified';
 }
 add_filter( 'date_range_filter_query_column', 'my_date_range_filter_query_column', 10, 1 );
-```
+`
 
 **Languages Supported:**
 
