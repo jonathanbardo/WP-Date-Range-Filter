@@ -18,12 +18,12 @@ A big shout-out to the [Stream](https://profiles.wordpress.org/stream/) team for
 This plugin was develop to supercharge the current date filter of WordPress admin. It will let you filter posts by a custom date range or by an already defined range.
 
 By default the plugin only filters post creation date. If you would like to filter the post modified date, please use this filter:
-`
+<pre lang="php">
 function my_date_range_filter_query_column( $column ){
 	return 'post_modified';
 }
 add_filter( 'date_range_filter_query_column', 'my_date_range_filter_query_column', 10, 1 );
-`
+</pre>
 
 **Languages Supported:**
 
