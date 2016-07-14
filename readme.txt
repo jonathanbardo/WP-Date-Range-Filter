@@ -33,6 +33,12 @@ add_filter( 'date_range_filter_query_column', 'my_date_range_filter_query_column
 
 Please fill out an issue [here](https://github.com/jonathanbardo/WP-Date-Range-Filter/issues).
 
+== Screenshots ==
+
+1. Filter posts list.
+2. Get a glance of post type count by date in the dashboard.
+3. Customize the date range of the dashboard widget.
+
 == Changelog ==
 
 = 0.0.10 =
