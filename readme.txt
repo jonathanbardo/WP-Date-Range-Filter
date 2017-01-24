@@ -2,7 +2,7 @@
 Contributors:      jonathanbardo, lossonet, stream
 Tags:              date, filter, admin, dashboard, widget, stats
 Requires at least: 3.7
-Tested up to:      4.4
+Tested up to:      4.7.1
 Stable tag:        trunk
 License:           GPLv2 or later
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
@@ -40,6 +40,13 @@ Please fill out an issue [here](https://github.com/jonathanbardo/WP-Date-Range-F
 3. Customize the date range of the dashboard widget.
 
 == Changelog ==
+
+= 0.0.11 =
+* Let user enter date manually for custom date range
+* Add min js & css
+
+= 0.0.10 =
+Fix compatibility with WooCommerce
 
 = 0.0.10 =
 Fix compatibility with WooCommerce

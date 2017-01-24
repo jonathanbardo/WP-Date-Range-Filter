@@ -41,8 +41,6 @@ use InvalidArgumentException;
  *
  * @property-read  DateTimeZone        $timezone the current timezone
  * @property-read  DateTimeZone        $tz alias of timezone
- * @property-write DateTimeZone|string $timezone the current timezone
- * @property-write DateTimeZone|string $tz alias of timezone
  *
  */
 class Carbon extends DateTime
@@ -641,16 +639,18 @@ class Carbon extends DateTime
       return $this;
    }
 
-   /**
-    * Set the time all together
-    *
-    * @param  integer  $hour
-    * @param  integer  $minute
-    * @param  integer  $second
-    *
-    * @return Carbon
-    */
-   public function setTime($hour, $minute, $second = 0)
+	/**
+	 * Set the time all together
+	 *
+	 * @param  integer $hour
+	 * @param  integer $minute
+	 * @param  integer $second
+	 *
+	 * @param null     $microseconds
+	 *
+	 * @return Carbon
+	 */
+   public function setTime($hour, $minute, $second = 0, $microseconds = NULL)
    {
       return $this->hour($hour)->minute($minute)->second($second);
    }

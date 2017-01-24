@@ -7,7 +7,7 @@ Easily filter the admin list of post and custom post type with a date range.
 **Contributors:** [jonathanbardo](https://profiles.wordpress.org/jonathanbardo), [lossonet](https://profiles.wordpress.org/lossonet), [stream](https://profiles.wordpress.org/stream)  
 **Tags:** [date](https://wordpress.org/plugins/tags/date), [filter](https://wordpress.org/plugins/tags/filter), [admin](https://wordpress.org/plugins/tags/admin), [dashboard](https://wordpress.org/plugins/tags/dashboard), [widget](https://wordpress.org/plugins/tags/widget), [stats](https://wordpress.org/plugins/tags/stats)  
 **Requires at least:** 3.7  
-**Tested up to:** 4.4  
+**Tested up to:** 4.7.1  
 **Stable tag:** trunk (master)  
 **License:** [GPLv2 or later](http://www.gnu.org/licenses/gpl-2.0.html)  
 
@@ -50,6 +50,13 @@ Please fill out an issue [here](https://github.com/jonathanbardo/WP-Date-Range-F
 ![Customize the date range of the dashboard widget.](assets/screenshot-3.png)
 
 ## Changelog ##
+
+### 0.0.11 ###
+* Let user enter date manually for custom date range
+* Add min js & css
+
+### 0.0.10 ###
+Fix compatibility with WooCommerce
 
 ### 0.0.10 ###
 Fix compatibility with WooCommerce

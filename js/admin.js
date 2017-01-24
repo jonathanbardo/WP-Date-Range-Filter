@@ -42,13 +42,7 @@ jQuery(function($) {
 					datepickers.datepicker({
 						dateFormat: 'yy/mm/dd',
 						maxDate: dayOffset,
-						defaultDate: siteTime,
-						beforeShow: function() {
-							$( this ).prop( 'disabled', true );
-						},
-						onClose: function() {
-							$( this ).prop( 'disabled', false );
-						}
+						defaultDate: siteTime
 					});
 
 					datepickers.datepicker( 'widget' ).addClass( 'date-range-filter-datepicker' );

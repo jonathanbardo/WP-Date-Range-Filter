@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Date range filter
  * Description: Easily filter the admin list of post and custom post type with a date range
- * Version: 0.0.10
+ * Version: 0.0.11
  * Author: Jonathan Bardo, Ricardo Losso
  * License: GPLv2+
  * Text Domain: date-range-filter
@@ -14,7 +14,7 @@ class Date_Range_Filter {
 	/**
 	 * Holds the plugin version number
 	 */
-	const VERSION = '0.0.10';
+	const VERSION = '0.0.11';
 
 	/**
 	 * Contain the called class name
@@ -209,10 +209,12 @@ class Date_Range_Filter {
 			return false;
 		}
 
+		$suffix = SCRIPT_DEBUG ? '' : '.min';
+
 		wp_register_style( 'jquery-ui', '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/jquery-ui.css', array(), '1.10.1' );
-		wp_enqueue_style( 'date-range-filter-datepicker', DATE_RANGE_FILTER_URL . 'css/datepicker.css', array( 'jquery-ui' ), self::VERSION );
-		wp_enqueue_style( 'date-range-filter-admin', DATE_RANGE_FILTER_URL . 'css/admin.css', array(), self::VERSION );
-		wp_register_script( 'date-range-filter-admin', DATE_RANGE_FILTER_URL . 'js/admin.js', array( 'jquery' ), self::VERSION, true );
+		wp_enqueue_style( 'date-range-filter-datepicker', DATE_RANGE_FILTER_URL . "css/datepicker{$suffix}.css", array( 'jquery-ui' ), self::VERSION );
+		wp_enqueue_style( 'date-range-filter-admin', DATE_RANGE_FILTER_URL . "css/admin{$suffix}.css", array(), self::VERSION );
+		wp_register_script( 'date-range-filter-admin', DATE_RANGE_FILTER_URL . "js/admin{$suffix}.js", array( 'jquery' ), self::VERSION, true );
 		wp_localize_script(
 			'date-range-filter-admin',
 			'date_range_filter',
