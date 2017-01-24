@@ -7,7 +7,7 @@
  * License: GPLv2+
  * Text Domain: date-range-filter
  * Domain Path: /languages
- * Author URI: http://jonathanbardo.com, http://ricardolosso.com
+ * Author URI: https://jonathanbardo.com
  */
 
 class Date_Range_Filter {
